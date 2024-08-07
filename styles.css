@@ -226,7 +226,7 @@ input:checked+.slider:before {
 
 button {
   border: 1px outset #ffffff00;
-  background-color: #fff0;
+  
   
   border-radius: 6px;
   font-weight: 600;
@@ -236,7 +236,7 @@ button {
 }
 button3 {
   border: 1px outset #ffffff00;
-  background-color: #fff0;
+ 
   
   border-radius: 6px;
   font-weight: 600;
@@ -246,7 +246,7 @@ button3 {
 }
 button1 {
   border: 1px outset #ffffff00;
-  background-color: #fff0;
+  
  
   border-radius: 6px;
   font-weight: 600;
