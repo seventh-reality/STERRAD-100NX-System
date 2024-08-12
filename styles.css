@@ -345,16 +345,4 @@ button2.disabled {
     transform: translate3d(-50%, -50%, 0);
     z-index: 100;
   }
-model-viewer[ar-status="session-started"] > #ar-prompt {
-display: block;
-}
-model-viewer[ar-status="object-placed"] > #ar-prompt {
-display: block;
-}
-model-viewer[ar-status="not-presenting"] > #ar-prompt {
-display: block;
-}
-model-viewer[ar-status="failed"] > #ar-prompt {
-display: block;
-}
 
