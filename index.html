@@ -18,8 +18,10 @@
 <body>
     <div id="card">
     <audio id="audio">
-			<source src="v.mp3" type="audio/mpeg">
-		</audio>
+       <source src="v.mp3" type="audio/mpeg">
+    </audio>
+	<div id="ar-prompt"> <p class="description"> <span class="bold">Name</span><br> Title<br> </p> <p class="linked"> <a class="followLinkhref" ="url"> <span>call to action</span></a> </p> </div>    
+	    
    
     <model-viewer id="toggle-model" src="Steerad.glb"  ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="" shadow-intensity=".25"  touch-action="pan-y"  environment-image="legacy"">
 	 <div class="progress-bar hide" slot="progress-bar">
@@ -43,6 +45,24 @@
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
       </div>
+	  #ar-prompt {
+width: 600px;
+height: auto;
+-webkit-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+position: absolute;
+bottom: 0%;
+left: 50%;
+background-color: #F3F7FA;
+position: absolute;
+display: none;
+padding: 20px;
+bottom: 10px;
+border-radius: 12px;
+border: 1px solid #DADCE0;
+box-shadow: 0px 3px 5px #D6DBDF;
+column-count: 2;
+}   
     </model-viewer>
     <section class="attributiontwo">
         <p style="background-image: url('black.png')" style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
