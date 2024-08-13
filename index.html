@@ -13,19 +13,16 @@
     <script src="https://threejs.org/build/three.min.js"></script>
     <script src="./src/threejs_wasm_worker.js"></script>
     <script href="https://developers.google.com/ar/develop/java/scene-viewer"></script>	
-    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
-	
-    
-
+    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>	
 </head>
 <body>
-	
     <div id="card">
     <audio id="audio">
        <source src="v.mp3" type="audio/mpeg">
     </audio>
+
    
-    <model-viewer  id="mv" id="toggle-model" src="Steerad.glb#applePayButtonType=plain&checkoutTitle=Spaceman%20Toy&checkoutSubtitle=1969LimitedEdition&price=$99" ios-src="Steerad.usdz#applePayButtonType=plain&checkoutTitle=Spaceman%20Toy&checkoutSubtitle=1969LimitedEdition&price=$99" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="" shadow-intensity=".25"  touch-action="pan-y"  environment-image="legacy"">
+    <model-viewer id="toggle-model" src="Steerad.glb" ios-banner="https://example.com/customBanners/comingSoonBanner.html" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="" shadow-intensity=".25"  touch-action="pan-y"  environment-image="legacy"">
 	 <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
@@ -35,7 +32,7 @@
 	 <div id="button" style = "display:flex; justify-content: space-between;">
           <img src="4.png"  align="center" style="width:100px;   padding-left: 5px;padding-top: 0px;"/>
 	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
-      </div>
+      </div>   
 	
         <button3 class="slide selected" id="1" onclick="switchSrc(1,'sterrad_anim.glb',play_to_end(),playAudio())" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button3>
 	 <a class="slide selected" id="11" onclick="switchSrc('sterrad_anim.glb')"></a>  
@@ -146,7 +143,8 @@ var x = document.getElementById("audio");
 
 function playAudio() { 
   x.play(); 
-}
+} 
+	
 
 </script>    
 	    
