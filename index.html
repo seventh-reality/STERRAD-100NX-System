@@ -156,7 +156,25 @@ var x = document.getElementById("audio");
 
 function playAudio() { 
   x.play(); 
-} 
+}
+	
+// script.js
+
+document.getElementById("ar-button").addEventListener("click", function() {
+    // Show the banner
+    document.getElementById("ar-banner").classList.remove("hidden");
+
+    // Create an anchor tag to trigger the AR Quick Look
+    const anchor = document.createElement('a');
+    anchor.rel = 'ar';
+    anchor.href = 'https://example.com/path/to/your/model.usdz'; // Replace with your USDZ model URL
+    anchor.click();
+
+    // Hide the banner after a few seconds (simulate loading time)
+    setTimeout(() => {
+        document.getElementById("ar-banner").classList.add("hidden");
+    }, 5000); // Adjust the time as needed
+});
 	
 
 </script>    
