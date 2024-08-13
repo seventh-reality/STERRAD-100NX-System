@@ -17,7 +17,7 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AR Quick Look Button</title>
-    <link rel="stylesheet" href="styles.css">
+    
 
 </head>
 <body>
@@ -39,10 +39,7 @@
           <img src="4.png"  align="center" style="width:100px;   padding-left: 5px;padding-top: 0px;"/>
 	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
       </div>
-<!-- Button to trigger AR Quick Look -->
-    <button id="ar-button">View in AR</button>
 
-    <!-- Banner that appears after clicking the button -->
     <div id="ar-banner" class="hidden">
         <p>AR Model is loading...</p>
     </div>
@@ -173,7 +170,7 @@ document.getElementById("ar-button").addEventListener("click", function() {
     // Hide the banner after a few seconds (simulate loading time)
     setTimeout(() => {
         document.getElementById("ar-banner").classList.add("hidden");
-    }, 5000); // Adjust the time as needed
+    }, 10000); // Adjust the time as needed
 });
 	
 
