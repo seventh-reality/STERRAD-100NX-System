@@ -13,9 +13,15 @@
     <script src="https://threejs.org/build/three.min.js"></script>
     <script src="./src/threejs_wasm_worker.js"></script>
     <script href="https://developers.google.com/ar/develop/java/scene-viewer"></script>	
-    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>	
+    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Quick Look Button</title>
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
+	
     <div id="card">
     <audio id="audio">
        <source src="v.mp3" type="audio/mpeg">
@@ -32,7 +38,14 @@
 	 <div id="button" style = "display:flex; justify-content: space-between;">
           <img src="4.png"  align="center" style="width:100px;   padding-left: 5px;padding-top: 0px;"/>
 	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
-      </div>   
+      </div>
+<!-- Button to trigger AR Quick Look -->
+    <button id="ar-button">View in AR</button>
+
+    <!-- Banner that appears after clicking the button -->
+    <div id="ar-banner" class="hidden">
+        <p>AR Model is loading...</p>
+    </div>
 	
         <button3 class="slide selected" id="1" onclick="switchSrc(1,'sterrad_anim.glb',play_to_end(),playAudio())" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button3>
 	 <a class="slide selected" id="11" onclick="switchSrc('sterrad_anim.glb')"></a>  
