@@ -39,10 +39,6 @@
           <img src="4.png"  align="center" style="width:100px;   padding-left: 5px;padding-top: 0px;"/>
 	  <img src="iitname.png"  style="width:100px;  padding-right: 0px;padding-top: 0px;"/>    
       </div>
-
-    <div id="ar-banner" class="hidden">
-        <p>AR Model is loading...</p>
-    </div>
 	
         <button3 class="slide selected" id="1" onclick="switchSrc(1,'sterrad_anim.glb',play_to_end(),playAudio())" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button3>
 	 <a class="slide selected" id="11" onclick="switchSrc('sterrad_anim.glb')"></a>  
@@ -155,24 +151,7 @@ function playAudio() {
   x.play(); 
 }
 	
-// script.js
 
-document.getElementById("ar-button").addEventListener("click", function() {
-    // Show the banner
-    document.getElementById("ar-banner").classList.remove("hidden");
-
-    // Create an anchor tag to trigger the AR Quick Look
-    const anchor = document.createElement('a');
-    anchor.rel = 'ar';
-    anchor.href = 'Steerad.usdz'; // Replace with your USDZ model URL
-    anchor.click();
-
-    // Hide the banner after a few seconds (simulate loading time)
-    setTimeout(() => {
-        document.getElementById("ar-banner").classList.add("hidden");
-    }, 10000); // Adjust the time as needed
-});
-	
 
 </script>    
 	    
