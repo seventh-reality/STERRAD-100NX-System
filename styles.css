@@ -345,6 +345,9 @@ button2.disabled {
     transform: translate3d(-50%, -50%, 0);
     z-index: 100;
   }
+#textr{
+  display:none;
+}
 
 
 
