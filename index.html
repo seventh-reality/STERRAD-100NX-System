@@ -43,12 +43,12 @@
           		 
        
 	
-        <button3 class="slide selected" id="1" id="textr" onclick="switchSrc(1,'sterrad_anim.glb',play_to_end(),playAudio(),show())" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button3>
-	 <a class="slide selected" id="11" onclick="switchSrc('sterrad_anim.glb')"></a>  
-        <button1 class="slide selected" id="2" id="textrs" onclick="switchSrc(2,'Steeradtext.glb',play_to_end(),playAudio(),show())" style="float:inline-end";><img src="Icon_1.png" id="youtube-icon" style="width:40px;height:40px;"></button1>
-	 <a class="slide selected" id="22" onclick="switchSrc('Steeradtext.glb')"></a>     
-        <button2 class="slide selected" id="3" id="textrst" onclick="switchSrc(3,'Steerad.glb',playAudio(),show())" style="float:left"; style="display: inline;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button2>
-	 <a class="slide selected" id="33" onclick="switchSrc('Steerad.glb')"></a>     
+        <button class="slide selected" id="1" id="textr" onclick="switchSrc(1,'sterrad_anim.glb')" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+	      <!--  <a class="slide selected" id="11" onclick="switchSrc('sterrad_anim.glb')"></a>   -->
+        <button class="slide selected" id="2" id="textrs" onclick="switchSrc(2,'Steeradtext.glb')" style="float:inline-end";><img src="Icon_1.png" id="youtube-icon" style="width:40px;height:40px;"></button> 
+	     <!--  <a class="slide selected" id="22" onclick="switchSrc('Steeradtext.glb')"></a>  -->    
+        <button class="slide selected" id="3" id="textrst" onclick="switchSrc(3,'Steerad.glb')" style="float:left"; style="display: inline;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+	      <!--  <a class="slide selected" id="33" onclick="switchSrc('Steerad.glb')"></a>    -->  
         
       <div id="ar-prompt">
           <img src="ar_hand_prompt.png">
@@ -68,14 +68,13 @@
        </span>
     
     </section>        
-    <script>
-const myTimeout = setTimeout(myGreeting, 10000);	    
-function myGreeting() {
-  document.getElementById("textr").innerHTML = ""
-}
 
-</script> 
 <script>
+    const myTimeout = setTimeout(myGreeting, 10000);	    
+    function myGreeting() {
+    document.getElementById("textr").innerHTML = ""
+    }
+
 	function show() {
             /* Access image by id and change 
             the display property to block*/     
@@ -156,33 +155,30 @@ function myGreeting() {
 		
             break;
         }
+		playAudio();
+		play_to_end();
         toggleModel.setAttribute('src', ${src});  
+
     }
-</script>
-<script>
-function play_to_end (){
+	function play_to_end (){
 //play to end or rewind if animation is at end//
 	const modelViewer = document.querySelector('#toggle-model');
 	modelViewer.play();
 	t=modelViewer.duration;
 	t=t*960/2 ;// because duration is in second and time to play and rewind//
 	setTimeout(stop, t);
-}
-function stop(){
-const modelViewer = document.querySelector('#toggle-model');
-modelViewer.pause();
-}
-var x = document.getElementById("audio"); 
+}	
+	function stop(){
+	const modelViewer = document.querySelector('#toggle-model');
+	modelViewer.pause();
+	}
+	var x = document.getElementById("audio"); 
 
-function playAudio() { 
-  x.play(); 
-} 
-	
-
-</script>    
-	    
-	    
-	       
+	function playAudio() { 
+	  x.play(); 
+	} 
+		
+</script>      
 </dev> 
     <script type="module" src="https://unpkg.com/@onirix/ar-engine-sdk@1.8.1/dist/ox-sdk.esm.js"></script>    
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
