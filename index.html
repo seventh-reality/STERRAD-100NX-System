@@ -43,11 +43,11 @@
           		 
        
 	
-        <button class="slide selected" id="1" id="textr" onclick="switchSrc(1,'sterrad_anim.glb')" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button3 class="slide selected" id="1" id="textr" onclick="switchSrc(1,'sterrad_anim.glb',play_to_end(),playAudio(),show())" style="float:right";><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button3>
 	 <a class="slide selected" id="11" onclick="switchSrc('sterrad_anim.glb')"></a>  
-        <button class="slide selected" id="2" id="textrs" onclick="switchSrc(2,'Steeradtext.glb')" style="float:inline-end";><img src="Icon_1.png" id="youtube-icon" style="width:40px;height:40px;">Button 1</button>
+        <button1 class="slide selected" id="2" id="textrs" onclick="switchSrc(2,'Steeradtext.glb',play_to_end(),playAudio(),show())" style="float:inline-end";><img src="Icon_1.png" id="youtube-icon" style="width:40px;height:40px;"></button1>
 	 <a class="slide selected" id="22" onclick="switchSrc('Steeradtext.glb')"></a>     
-        <button class="slide selected" id="3" id="textrst" onclick="switchSrc(3,'Steerad.glb')" style="float:left"; style="display: inline;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button>
+        <button2 class="slide selected" id="3" id="textrst" onclick="switchSrc(3,'Steerad.glb',playAudio(),show())" style="float:left"; style="display: inline;"><img src="Icon.png" id="youtube-icon" style="width:40px;height:40px;"></button2>
 	 <a class="slide selected" id="33" onclick="switchSrc('Steerad.glb')"></a>     
         
       <div id="ar-prompt">
@@ -98,7 +98,7 @@ function myGreeting() {
     const models = ['Steerad.glb', 'Steeradtext.glb', 'sterrad_anim.glb'];
     const toggleModel = document.querySelector('#toggle-model');
     // let j = 0;
-    // setInterval(() => toggleModel.setAttribute('src', ${models[j++ % 2]}), 2000);
+    // setInterval(() => toggleModel.setAttribute('src', `${models[j++ % 2]}`), 2000);
     function switchSrc(indx,src){
         // if(indx == 2){
         //     document.getElementById("iitpl").style.setProperty('display','none');
@@ -156,9 +156,7 @@ function myGreeting() {
 		
             break;
         }
-        toggleModel.setAttribute('src', ${src});  
-		playAudio();
-		play_to_end();
+        toggleModel.setAttribute('src', `${src}`);  
     }
 </script>
 <script>
