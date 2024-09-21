@@ -15,6 +15,20 @@
     <script src="./src/threejs_wasm_worker.js"></script>
     <script href="https://developers.google.com/ar/develop/java/scene-viewer"></script>
     <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
+    <style>
+        button {
+            position: absolute;
+            bottom: 50px; /* Position from the bottom */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust position to center */
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -22,7 +36,7 @@
         <audio id="audio">
             <source src="v.mp3" type="audio/mpeg">
         </audio>
-
+      <button id="openWebsite">View IN AR</button>
 
         <model-viewer id="toggle-model" src="Steerad.glb"
             ios-banner="https://example.com/customBanners/comingSoonBanner.html" ar
@@ -44,6 +58,7 @@
     <div id="textrs">
         <img src="Text.png" style=" transform: translate(5px,300px);" />
     </div>
+            
 
 
 
@@ -96,6 +111,9 @@
         const myTimeout = setTimeout(myGreeting, 10000);
         function myGreeting() {
             document.getElementById("textr").innerHTML = ""
+        }
+        function openWebsite() {
+            window.open('https://seventh-reality.github.io/Sterrad_Android_IOS/', '_blank'); // Replace with your URL
         }
 
     </script>
