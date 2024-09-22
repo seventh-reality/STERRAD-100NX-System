@@ -257,6 +257,16 @@ button1 {
   top: 100%;
   transform: translateX(-180%);
 }
+button4 {
+  border: 1px outset #ffffff00;
+ 
+  
+  border-radius: 6px;
+  font-weight: 600;
+  position: sticky;
+  top: 100%;
+  transform: translateX(-50%);
+}
 button2 {
   border: 1px outset #ffffff00;
   background-color: #fff0;
