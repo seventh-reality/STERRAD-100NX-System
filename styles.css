@@ -10,8 +10,8 @@ body {
   color: #000000;
   background-color: #fff;
 }
-#click{
-  transform: translateX(5% 5%);
+#buttonc{
+  transform: translate(5%, 5%);
 }
 
 
