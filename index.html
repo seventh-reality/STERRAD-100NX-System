@@ -178,22 +178,17 @@
     </script>
     <script>
         function play_to_end() {
-    modelViewer.play();
-    modelViewer.addEventListener('timeupdate', checkIfAnimationEnded);
-}
-
-// Stop animation when it reaches the end
-function checkIfAnimationEnded() {
-    const currentTime = modelViewer.currentTime;
-    const duration = modelViewer.duration;
-
-    // If current time reaches the total duration, stop the animation
-    if (currentTime >= duration) {
-        modelViewer.pause();
-        modelViewer.currentTime = 0;  // Optionally rewind to the beginning
-        modelViewer.removeEventListener('timeupdate', checkIfAnimationEnded); // Remove listener after stopping
-    }
-}
+            //play to end or rewind if animation is at end//
+            const modelViewer = document.querySelector('#toggle-model');
+            modelViewer.play();
+            t = modelViewer.duration;
+            t = t * 960 / 1;// because duration is in second and time to play and rewind//
+            setTimeout(stop, t);
+        }
+        function stop() {
+            const modelViewer = document.querySelector('#toggle-model');
+            modelViewer.pause();
+        }
         // var x = document.getElementById("audio");
         // var y = document.getElementById("audio1");
         // var z = document.getElementById("audio2");
