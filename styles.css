@@ -17,6 +17,7 @@ body {
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: row-reverse;
+   transform: translate(5%,-1%);
 }
 #cc{
   transform: translate(100%,-80%);
