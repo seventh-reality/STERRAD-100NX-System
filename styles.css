@@ -10,6 +10,9 @@ body {
   color: #000000;
   background-color: #fff;
 }
+#all{
+  display:flex;
+}
 #cc{
   transform: translate(100%,-80%);
 }
