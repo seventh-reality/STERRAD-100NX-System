@@ -187,7 +187,7 @@
             const modelViewer = document.querySelector('#toggle-model');
             modelViewer.play();
             t = modelViewer.duration;
-            t = t * 960 / 1;// because duration is in second and time to play and rewind//
+            t = t * 960 / 2;// because duration is in second and time to play and rewind//
             setTimeout(stop, t);
         }
         function stop() {
