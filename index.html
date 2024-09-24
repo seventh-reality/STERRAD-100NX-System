@@ -153,7 +153,7 @@
             const modelViewer = document.querySelector('#toggle-model');
             modelViewer.play();
             t = modelViewer.duration;
-            if(t == 0) t= 0;
+            if(t == 0) t= 10;
             t = t * 960 / 1;// because duration is in second and time to play and rewind//
             setTimeout(stop, t);
         }
