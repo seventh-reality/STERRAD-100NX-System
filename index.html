@@ -30,7 +30,7 @@
         </audio> -->
         <model-viewer id="toggle-model" src="Steerad.glb"
             ios-banner="https://example.com/customBanners/comingSoonBanner.html" ar
-            ar-modes="webxr scene-viewer quick-look" camera-controls alt="" shadow-intensity=".25" touch-action="pan-y" environment-image="legacy" animation-loop="false">
+            ar-modes="webxr scene-viewer quick-look" camera-controls alt="" shadow-intensity=".25" touch-action="pan-y"  autoplay environment-image="legacy" animation-loop="false">
             <div class=" progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
     </div>
@@ -178,17 +178,22 @@
     </script>
     <script>
         function play_to_end() {
-            //play to end or rewind if animation is at end//
-            const modelViewer = document.querySelector('#toggle-model');
-            modelViewer.play();
-            t = modelViewer.duration;
-            t = t * 960 / 1;// because duration is in second and time to play and rewind//
-            setTimeout(stop, t);
-        }
-        function stop() {
-            const modelViewer = document.querySelector('#toggle-model');
-            modelViewer.pause();
-        }
+    modelViewer.play();
+    modelViewer.addEventListener('timeupdate', checkIfAnimationEnded);
+}
+
+// Stop animation when it reaches the end
+function checkIfAnimationEnded() {
+    const currentTime = modelViewer.currentTime;
+    const duration = modelViewer.duration;
+
+    // If current time reaches the total duration, stop the animation
+    if (currentTime >= duration) {
+        modelViewer.pause();
+        modelViewer.currentTime = 0;  // Optionally rewind to the beginning
+        modelViewer.removeEventListener('timeupdate', checkIfAnimationEnded); // Remove listener after stopping
+    }
+}
         // var x = document.getElementById("audio");
         // var y = document.getElementById("audio1");
         // var z = document.getElementById("audio2");
