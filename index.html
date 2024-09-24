@@ -93,9 +93,7 @@
     </script>
     <script>
         const myTimeout = setTimeout(myGreeting, 10000);
-        function myGreeting() {
-            document.getElementById("textr").innerHTML = ""
-        }
+       
 
     </script>
     <script>
@@ -189,7 +187,7 @@
             const modelViewer = document.querySelector('#toggle-model');
             modelViewer.play();
             t = modelViewer.duration;
-            t = t * 960 / 2;// because duration is in second and time to play and rewind//
+            t = t * 1050 / 1;// because duration is in second and time to play and rewind//
             setTimeout(stop, t);
         }
         function stop() {
