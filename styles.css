@@ -194,13 +194,34 @@ input:checked+.slider:before {
 
 button {
   border: 1px outset #ffffff00;
+  
+  
   border-radius: 6px;
   font-weight: 600;
   position: sticky;
   top: 100%;
   transform: translate(-20%);
 }
-
+button3 {
+  border: 1px outset #ffffff00;
+ 
+  
+  border-radius: 6px;
+  font-weight: 600;
+  position: sticky;
+  top: 100%;
+  transform: translate(-50%, -30%);
+}
+button1 {
+  border: 1px outset #ffffff00;
+  
+ 
+  border-radius: 6px;
+  font-weight: 600;
+  position: sticky;
+  top: 100%;
+  transform: translate(-180%, -30%);
+}
 button4 {
   border: 1px outset #ffffff00;
  
@@ -211,24 +232,34 @@ button4 {
   top: 100%;
   transform: translateX(-50%);
 }
+button2 {
+  border: 1px outset #ffffff00;
+  background-color: #fff0;
+  
+  border-radius: 6px;
+  font-weight: 600;
+  position: sticky;
+  top: 100%;
+  transform: translate(50%, -30%);
+}
 
-1:hover {
+button3:hover {
   background-color: #92cfc2;
 }
-2:hover {
+button1:hover {
   background-color: #92cfc2;
 }
-3:hover {
+button2:hover {
   background-color: #92cfc2;
 }
 
-1.disabled {
+button3.disabled {
   background-color: #92cfc2;
 }
-2.disabled {
+button1.disabled {
   background-color: #92cfc2;
 }
-3.disabled {
+button2.disabled {
   background-color: #92cfc2;
 }
 
