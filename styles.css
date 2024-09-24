@@ -12,7 +12,7 @@ body {
 }
 #all{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-content: space-around;
     align-items: center;
     flex-wrap: nowrap;
