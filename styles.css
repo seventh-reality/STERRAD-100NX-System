@@ -196,26 +196,7 @@ button {
   top: 100%;
   transform: translate(-20%);
 }
-button3 {
-  border: 1px outset #ffffff00;
- 
-  
-  border-radius: 6px;
-  font-weight: 600;
-  position: sticky;
-  top: 100%;
-  transform: translate(-50%, -30%);
-}
-button1 {
-  border: 1px outset #ffffff00;
-  
- 
-  border-radius: 6px;
-  font-weight: 600;
-  position: sticky;
-  top: 100%;
-  transform: translate(-180%, -30%);
-}
+
 button4 {
   border: 1px outset #ffffff00;
  
@@ -225,16 +206,6 @@ button4 {
   position: sticky;
   top: 100%;
   transform: translateX(-50%);
-}
-button2 {
-  border: 1px outset #ffffff00;
-  background-color: #fff0;
-  
-  border-radius: 6px;
-  font-weight: 600;
-  position: sticky;
-  top: 100%;
-  transform: translate(50%, -30%);
 }
 
 button3:hover {
