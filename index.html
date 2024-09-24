@@ -20,14 +20,14 @@
 <body>
     <div id="card">
         <audio id="audio">
-            <source src="Intro.mp3" type="audio/mpeg">
+            <source id="audio-source" src="Intro.mp3" type="audio/mpeg">
         </audio>
-        <audio id="audio1">
+        <!-- <audio id="audio1">
             <source src="parts.mp3" type="audio/mpeg">
         </audio>
         <audio id="audio2">
             <source src="Usage.mp3" type="audio/mpeg">
-        </audio>
+        </audio> -->
         <model-viewer id="toggle-model" src="Steerad.glb"
             ios-banner="https://example.com/customBanners/comingSoonBanner.html" ar
             ar-modes="webxr scene-viewer quick-look" camera-controls alt="" shadow-intensity=".25" touch-action="pan-y"
@@ -35,10 +35,10 @@
 <div class=" progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
     </div>
-    <a  href="https://seventh-reality.github.io/Sterrad_Android_IOS/">        
-    <button slot="ar-button" id="ar-button">
-        View in 4D
-    </button></a>
+    <a href="https://seventh-reality.github.io/Sterrad_Android_IOS/">
+        <button slot="ar-button" id="ar-button">
+            View in 4D
+        </button></a>
     <div id="button" style="display:flex; justify-content: space-between; transform: translate(0px,-30px);">
         <img src="4.png" align="center" style="width:100px; padding-left: 5px;padding-top: 0px;" />
         <img src="Cam.png" style="width:120px; padding-right: 5px;padding-top: 0px;" />
@@ -49,16 +49,14 @@
     <div id="textrs">
         <img src="Text.png" style=" transform: translate(5px,300px);" />
     </div>
-            
-    <button3 class="slide selected" id="1" id="textr"
-        onclick="switchSrc(1,'USAGE.glb',playAudio2(),show())" style="float:right" ;><img
-            src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button3>
+
+    <button3 class="slide selected" id="1" id="textr" onclick="switchSrc(1,'USAGE.glb',playAudio('Intro.mp3'),show())"
+        style="float:right" ;><img src="Icon_2.png" id="youtube-icon" style="width:40px;height:40px;"></button3>
     <a class="slide selected" id="11" onclick="switchSrc('sterrad_anim.glb')"></a>
-    <button1 class="slide selected" id="2" id="textrs"
-        onclick="switchSrc(2,'Sterrad_PARTS.glb',playAudio1(),show())" style="float:inline-end" ;><img
-            src="Icon_1.png" id="youtube-icon" style="width:40px;height:40px;"></button1>
+    <button1 class="slide selected" id="2" id="textrs" onclick="switchSrc(2,'Sterrad_PARTS.glb',playAudio('parts.mp3'),show())"
+        style="float:inline-end" ;><img src="Icon_1.png" id="youtube-icon" style="width:40px;height:40px;"></button1>
     <a class="slide selected" id="22" onclick="switchSrc('Steeradtext.glb')"></a>
-    <button2 class="slide selected" id="3" id="textrst" onclick="switchSrc(3,'Steerad.glb',playAudio(),show())"
+    <button2 class="slide selected" id="3" id="textrst" onclick="switchSrc(3,'Steerad.glb',playAudio('Usage.mp3'),show())"
         style="float:left" ; style="display: inline;"><img src="Icon.png" id="youtube-icon"
             style="width:40px;height:40px;"></button2>
     <a class="slide selected" id="33" onclick="switchSrc('Steerad.glb')"></a>
@@ -69,8 +67,8 @@
 
     </model-viewer>
     <section class="attributiontwo">
-        <p style="background-image: url('')"
-    ">
+        <p style="background-image: url('black.png')"
+            style="width:60px;height:60px; padding-left: 0px;padding-top: 10px;">
 
             <span>
                 <a
@@ -94,17 +92,17 @@
             </span>
 
     </section>
-    <script>    
+    <script>
         function openURL() {
-      window.open("https://seventh-reality.github.io/Sterrad_Android_IOS/", "_blank"); // Opens in a new tab
-    }
+            window.open("https://seventh-reality.github.io/Sterrad_Android_IOS/", "_blank"); // Opens in a new tab
+        }
     </script>
     <script>
         const myTimeout = setTimeout(myGreeting, 10000);
         function myGreeting() {
             document.getElementById("textr").innerHTML = ""
         }
-        
+
     </script>
     <script>
         function show() {
@@ -196,39 +194,44 @@
             //play to end or rewind if animation is at end//
             const modelViewer = document.querySelector('#toggle-model');
             modelViewer.play();
-            t=modelViewer.duration;
-            t=t*960/2 ;// because duration is in second and time to play and rewind//
+            t = modelViewer.duration;
+            t = t * 960 / 2;// because duration is in second and time to play and rewind//
             setTimeout(stop, t);
         }
         function stop() {
             const modelViewer = document.querySelector('#toggle-model');
             modelViewer.pause();
         }
-        var x = document.getElementById("audio");
-        var y = document.getElementById("audio1");
-        var z = document.getElementById("audio2");
+        // var x = document.getElementById("audio");
+        // var y = document.getElementById("audio1");
+        // var z = document.getElementById("audio2");
 
-        function playAudio() {
-            x.play();
+        function playAudio(newSrc) {
+            var audioElement = document.getElementById("audio");
+            var sourceElement = document.getElementById("audio-source");
+
+            // Update the source
+            sourceElement.src = newSrc;
+
+            // Load the new source
+            audioElement.load();
+
+            // Play the audio
+            audioElement.play();
         }
-        function playAudio1() {
-            y.play();
-        }
-        function playAudio2() {
-            z.play();
-        }
+
 
 
     </script>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YQL89QFMW8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YQL89QFMW8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-YQL89QFMW8');
-</script>    
+        gtag('config', 'G-YQL89QFMW8');
+    </script>
 
 
 
