@@ -11,7 +11,7 @@ body {
   background-color: #fff;
 }
 #all{
-  display:block;
+  display:inline;
 }
 #cc{
   transform: translate(100%,-80%);
