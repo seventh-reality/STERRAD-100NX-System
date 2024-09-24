@@ -194,8 +194,6 @@ input:checked+.slider:before {
 
 button {
   border: 1px outset #ffffff00;
-  
-  
   border-radius: 6px;
   font-weight: 600;
   position: sticky;
@@ -214,23 +212,23 @@ button4 {
   transform: translateX(-50%);
 }
 
-button3:hover {
+1:hover {
   background-color: #92cfc2;
 }
-button1:hover {
+2:hover {
   background-color: #92cfc2;
 }
-button2:hover {
+3:hover {
   background-color: #92cfc2;
 }
 
-button3.disabled {
+1.disabled {
   background-color: #92cfc2;
 }
-button1.disabled {
+2.disabled {
   background-color: #92cfc2;
 }
-button2.disabled {
+3.disabled {
   background-color: #92cfc2;
 }
 
